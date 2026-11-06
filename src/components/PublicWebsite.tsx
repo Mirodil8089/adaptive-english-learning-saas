@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import {
   ArrowRight,
   Check,
@@ -13,11 +13,11 @@ import { formatMoney, t } from '../i18n';
 import { AuthUser, Currency, Locale, Plan, ProviderStatusMap } from '../types';
 import { ImageWithFallback } from './ImageWithFallback';
 
-const HERO_IMG = '/src/assets/images/hero_mindquest_edtech_1793797336651.jpg';
-const MOOD_IMG = '/src/assets/images/mode_mood_storytelling_1793797335990.jpg';
-const SIM_IMG = '/src/assets/images/mode_simulator_airport_1793797336167.jpg';
-const DET_IMG = '/src/assets/images/mode_detective_mystery_1793797338612.jpg';
-const GAME_IMG = '/src/assets/images/scene_oxford_gothic_library_1793800920229.jpg';
+import HERO_IMG from '../assets/images/hero_mindquest_edtech_1793797336651.jpg';
+import MOOD_IMG from '../assets/images/mode_mood_storytelling_1793797335990.jpg';
+import SIM_IMG from '../assets/images/mode_simulator_airport_1793797336167.jpg';
+import DET_IMG from '../assets/images/mode_detective_mystery_1793797338612.jpg';
+import GAME_IMG from '../assets/images/scene_oxford_gothic_library_1793800920229.jpg';
 
 interface PublicWebsiteProps {
   user: AuthUser | null;
@@ -104,7 +104,7 @@ const displayedPlans = plans?.filter((p) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
-      {/* Strict 3-Zone Top Bar Contract: [Brand wordmark] — [5 single-line nav links] — [1 primary CTA] */}
+      {/* Strict 3-Zone Top Bar Contract: [Brand wordmark] вЂ” [5 single-line nav links] вЂ” [1 primary CTA] */}
       <header className="sticky top-0 z-30 bg-white/95 dark:bg-slate-950/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
           <button
@@ -249,7 +249,7 @@ const displayedPlans = plans?.filter((p) => {
             onClick={() => setSubPage('landing')}
             className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline mb-6 cursor-pointer"
           >
-            ← Return to Home
+            в†ђ Return to Home
           </button>
 
           {subPage === 'about' && (
@@ -280,7 +280,7 @@ const displayedPlans = plans?.filter((p) => {
           {subPage === 'terms' && (
             <article className="space-y-5">
               <h1 className="text-3xl font-bold tracking-tight">Terms of Service</h1>
-              <p className="text-xs text-slate-500">Effective Date: November 2026 · MindQuest AI</p>
+              <p className="text-xs text-slate-500">Effective Date: November 2026 В· MindQuest AI</p>
               <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                 1. Educational Purpose Only: Mood Mode adapts English vocabulary and reading passages to general study preferences. MindQuest AI does not provide medical, psychological, or mental health advice or diagnosis.
               </p>
@@ -296,7 +296,7 @@ const displayedPlans = plans?.filter((p) => {
           {subPage === 'privacy' && (
             <article className="space-y-5">
               <h1 className="text-3xl font-bold tracking-tight">Privacy Policy & Data Minimization</h1>
-              <p className="text-xs text-slate-500">GDPR & Child Privacy Compliant · MindQuest AI</p>
+              <p className="text-xs text-slate-500">GDPR & Child Privacy Compliant В· MindQuest AI</p>
               <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                 1. Minimal Personal Data: We collect only your name, email address, hashed password, CEFR level, and learning interactions needed to personalize your curriculum. Raw payment card numbers and CVV codes never touch MindQuest AI servers.
               </p>
@@ -304,7 +304,7 @@ const displayedPlans = plans?.filter((p) => {
                 2. Minor & Parental Consent Protections: Learners under 18 must supply a verified parent or guardian email and explicit consent during registration.
               </p>
               <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                3. Self-Service Account Erasure: You may permanently delete your profile, conversation logs, and vocabulary history at any time from Dashboard → Profile & Security.
+                3. Self-Service Account Erasure: You may permanently delete your profile, conversation logs, and vocabulary history at any time from Dashboard в†’ Profile & Security.
               </p>
             </article>
           )}
@@ -382,12 +382,12 @@ const displayedPlans = plans?.filter((p) => {
         </main>
       ) : (
         <main className="flex-1">
-          {/* 1. HERO SECTION — 2-column balanced split + full-width 4-column architecture strip below */}
+          {/* 1. HERO SECTION вЂ” 2-column balanced split + full-width 4-column architecture strip below */}
           <section className="max-w-7xl mx-auto px-6 pt-12 pb-16 lg:pt-16 lg:pb-20">
             <div className="grid lg:grid-cols-12 gap-10 items-stretch">
               <div className="lg:col-span-6 flex flex-col justify-center">
                 <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-4">
-                  Mood-Adaptive Vocabulary · Real-Life RPG · Grammar Mysteries
+                  Mood-Adaptive Vocabulary В· Real-Life RPG В· Grammar Mysteries
                 </p>
                 <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] text-balance">
                   {t(locale, 'hero_title')}
@@ -415,7 +415,7 @@ const displayedPlans = plans?.filter((p) => {
                 </div>
 
                 <p className="mt-5 text-xs text-slate-500 dark:text-slate-400">
-                  Free starter plan included · Instant Uzbek & Russian glossaries · Cancel anytime
+                  Free starter plan included В· Instant Uzbek & Russian glossaries В· Cancel anytime
                 </p>
               </div>
 
@@ -428,7 +428,7 @@ const displayedPlans = plans?.filter((p) => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
                     <p className="text-xs text-slate-300 font-mono tabular-nums">
-                      CEFR A1–C1 · 9 Real-Life RPG Scenarios · 9 Grammar Investigation Topics
+                      CEFR A1вЂ“C1 В· 9 Real-Life RPG Scenarios В· 9 Grammar Investigation Topics
                     </p>
                     <p className="text-white text-base font-semibold mt-1">
                       Words saved in Mood Mode appear automatically inside your next Simulator conversation.
@@ -532,19 +532,19 @@ const displayedPlans = plans?.filter((p) => {
                 <div className="grid lg:grid-cols-12 gap-8 items-center">
                   <div className="lg:col-span-7 space-y-5">
                     <p className="text-xs text-slate-500 dark:text-slate-400">
-                      Selected Mood: Stressed · Target Level: B2 · Uzbek Translation Enabled
+                      Selected Mood: Stressed В· Target Level: B2 В· Uzbek Translation Enabled
                     </p>
                     <h3 className="text-xl font-bold">
-                      composure <span className="font-mono text-sm font-normal text-slate-500">/kəmˈpəʊ.ʒər/ · noun</span>
+                      composure <span className="font-mono text-sm font-normal text-slate-500">/kЙ™mЛ€pЙ™КЉ.К’Й™r/ В· noun</span>
                     </h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
                       Definition: The state of remaining calm and in control of oneself during high-pressure moments.
                     </p>
                     <p className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                      Uzbek: og‘ir-bosiqlik, xotirjamlik · Russian: выдержка, спокойствие
+                      Uzbek: ogвЂir-bosiqlik, xotirjamlik В· Russian: РІС‹РґРµСЂР¶РєР°, СЃРїРѕРєРѕР№СЃС‚РІРёРµ
                     </p>
                     <p className="text-sm italic text-slate-600 dark:text-slate-400">
-                      “Keeping composure at a busy airport gate makes flight rebooking much easier.”
+                      вЂњKeeping composure at a busy airport gate makes flight rebooking much easier.вЂќ
                     </p>
                     <div className="flex flex-wrap items-center gap-3 pt-2">
                       <button
@@ -578,21 +578,21 @@ const displayedPlans = plans?.filter((p) => {
                 <div className="grid lg:grid-cols-12 gap-8 items-center">
                   <div className="lg:col-span-7 space-y-4">
                     <p className="text-xs text-slate-500 dark:text-slate-400">
-                      Scenario: Heathrow Terminal 5 Transfer Desk · Active Mood Vocab Target: composure, itinerary
+                      Scenario: Heathrow Terminal 5 Transfer Desk В· Active Mood Vocab Target: composure, itinerary
                     </p>
                     <div className="space-y-3 py-2">
                       <div className="p-4 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                         <p className="text-xs font-semibold text-slate-500 mb-1">Airline Concierge (Claire)</p>
                         <p className="text-sm">
-                          “Good afternoon! Your inbound flight arrived 45 minutes late. How can I assist with your onward connection today?”
+                          вЂњGood afternoon! Your inbound flight arrived 45 minutes late. How can I assist with your onward connection today?вЂќ
                         </p>
                       </div>
                       <div className="p-4 rounded-lg bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900">
                         <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 mb-1">
-                          Learner Reply · Reused Mood Word: itinerary (+12 Bonus XP)
+                          Learner Reply В· Reused Mood Word: itinerary (+12 Bonus XP)
                         </p>
                         <p className="text-sm">
-                          “Hello! According to my itinerary, I missed flight BA-402. Could we move my seat to the evening departure?”
+                          вЂњHello! According to my itinerary, I missed flight BA-402. Could we move my seat to the evening departure?вЂќ
                         </p>
                       </div>
                     </div>
@@ -618,16 +618,16 @@ const displayedPlans = plans?.filter((p) => {
                 <div className="grid lg:grid-cols-12 gap-8 items-center">
                   <div className="lg:col-span-7 space-y-4">
                     <p className="text-xs text-slate-500 dark:text-slate-400">
-                      Case File: The Vanishing Prototype at Gate B14 · Grammar Focus: Past Perfect vs Present Perfect
+                      Case File: The Vanishing Prototype at Gate B14 В· Grammar Focus: Past Perfect vs Present Perfect
                     </p>
                     <p className="text-sm text-slate-600 dark:text-slate-300">
-                      Security cameras froze at 20:45. Examine Suspect Nadia Vance’s sworn statement:
+                      Security cameras froze at 20:45. Examine Suspect Nadia VanceвЂ™s sworn statement:
                     </p>
                     <blockquote className="p-4 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono">
-                      “When the lights flickered at 20:45, I have already returned the cabinet key since two hours, so I knew the prototype was gone.”
+                      вЂњWhen the lights flickered at 20:45, I have already returned the cabinet key since two hours, so I knew the prototype was gone.вЂќ
                     </blockquote>
                     <p className="text-xs text-slate-600 dark:text-slate-400">
-                      Clue detected: Broken Present Perfect with a finished past anchor (“at 20:45”) + “since two hours” instead of “for two hours” + impossible knowledge before 21:05 discovery.
+                      Clue detected: Broken Present Perfect with a finished past anchor (вЂњat 20:45вЂќ) + вЂњsince two hoursвЂќ instead of вЂњfor two hoursвЂќ + impossible knowledge before 21:05 discovery.
                     </p>
                     <button
                       type="button"
@@ -651,13 +651,13 @@ const displayedPlans = plans?.filter((p) => {
                 <div className="grid lg:grid-cols-12 gap-8 items-center">
                   <div className="lg:col-span-7 space-y-4">
                     <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">
-                      Visual Hotspot Discovery · 45s Speed Match Arena · Direct XP Rewards
+                      Visual Hotspot Discovery В· 45s Speed Match Arena В· Direct XP Rewards
                     </p>
                     <h3 className="text-xl font-bold">
                       Interactive Illustrated Clue Hunting & Word Match Arena
                     </h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                      Investigate high-resolution 4K illustrated scenes across Oxford’s Archival Library, a Silicon Valley AI Robotics Lab, and a European Bistro. Tap clickable coordinate hotspots to solve contextual vocabulary riddles, hear native pronunciations, and test rapid recall in the 45-second Speed Match Arena.
+                      Investigate high-resolution 4K illustrated scenes across OxfordвЂ™s Archival Library, a Silicon Valley AI Robotics Lab, and a European Bistro. Tap clickable coordinate hotspots to solve contextual vocabulary riddles, hear native pronunciations, and test rapid recall in the 45-second Speed Match Arena.
                     </p>
                     <div className="p-4 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs space-y-2">
                       <div className="flex items-center justify-between">
@@ -665,10 +665,10 @@ const displayedPlans = plans?.filter((p) => {
                         <span className="text-xs font-mono font-bold text-amber-500">+100 XP</span>
                       </div>
                       <p className="text-slate-600 dark:text-slate-400">
-                        Target Word: <span className="font-mono font-bold text-blue-600 dark:text-blue-400">parchment</span> · Uzbek: <span className="font-medium text-slate-900 dark:text-white">pergament, qadimiy qog‘oz</span>
+                        Target Word: <span className="font-mono font-bold text-blue-600 dark:text-blue-400">parchment</span> В· Uzbek: <span className="font-medium text-slate-900 dark:text-white">pergament, qadimiy qogвЂoz</span>
                       </p>
                       <p className="text-slate-500 italic">
-                        Riddle: “I am durable skin treated for ancient texts before modern pulp papers. What am I?”
+                        Riddle: вЂњI am durable skin treated for ancient texts before modern pulp papers. What am I?вЂќ
                       </p>
                     </div>
                     <div className="flex flex-wrap items-center gap-3 pt-2">
@@ -708,11 +708,11 @@ const displayedPlans = plans?.filter((p) => {
               <div className="md:col-span-2 p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
                 <div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
-                    Step 1 → Step 2 · Vocabulary Transfer
+                    Step 1 в†’ Step 2 В· Vocabulary Transfer
                   </p>
                   <h3 className="text-xl font-bold mb-2">01. Emotion-Adaptive Mood Mode</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Choose optional moods—Happy, Sad, Tired, Motivated, Relaxed, Curious, Confident, or Stressed. MindQuest AI selects CEFR-matched vocabulary with IPA audio, Uzbek and Russian translations, flashcards, and short comprehension stories without ever making psychological claims.
+                    Choose optional moodsвЂ”Happy, Sad, Tired, Motivated, Relaxed, Curious, Confident, or Stressed. MindQuest AI selects CEFR-matched vocabulary with IPA audio, Uzbek and Russian translations, flashcards, and short comprehension stories without ever making psychological claims.
                   </p>
                 </div>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
@@ -723,11 +723,11 @@ const displayedPlans = plans?.filter((p) => {
               <div className="p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
                 <div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
-                    Step 2 → Step 3 · Spoken Fluency
+                    Step 2 в†’ Step 3 В· Spoken Fluency
                   </p>
                   <h3 className="text-xl font-bold mb-2">02. Real-Life RPG Simulator</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Speak or type through 9 realistic scenarios—from customs desks to executive negotiations—with speech-to-text, neural TTS, and honest turn-by-turn grammar feedback.
+                    Speak or type through 9 realistic scenariosвЂ”from customs desks to executive negotiationsвЂ”with speech-to-text, neural TTS, and honest turn-by-turn grammar feedback.
                   </p>
                 </div>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
@@ -738,7 +738,7 @@ const displayedPlans = plans?.filter((p) => {
               <div className="p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
                 <div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
-                    Step 3 → Mastery · Deductive Grammar
+                    Step 3 в†’ Mastery В· Deductive Grammar
                   </p>
                   <h3 className="text-xl font-bold mb-2">03. Grammar Detective Mysteries</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -768,7 +768,7 @@ const displayedPlans = plans?.filter((p) => {
               <div className="md:col-span-2 p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
                 <div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
-                    24/7 Bilingual Coaching · EN & UZ
+                    24/7 Bilingual Coaching В· EN & UZ
                   </p>
                   <h3 className="text-xl font-bold mb-2">05. Bilingual AI Teacher & Personalized Study Plans</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -788,7 +788,7 @@ const displayedPlans = plans?.filter((p) => {
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
                   <p className="text-xs font-medium text-blue-600 dark:text-blue-400 mb-2">
-                    Transparent Subscriptions · Stripe, Payme & Click Ready
+                    Transparent Subscriptions В· Stripe, Payme & Click Ready
                   </p>
                   <h2 className="text-3xl font-bold tracking-tight">
                     Choose the plan matched to your study pace
@@ -827,7 +827,7 @@ const displayedPlans = plans?.filter((p) => {
                     >
                       <div>
                         <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">
-                          {plan.billing_interval === 'year' ? 'Annual Pass · Save 25%' : 'Monthly Tier'}
+                          {plan.billing_interval === 'year' ? 'Annual Pass В· Save 25%' : 'Monthly Tier'}
                         </p>
                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">{plan.name}</h3>
                         <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 min-h-[32px]">
@@ -910,26 +910,26 @@ const displayedPlans = plans?.filter((p) => {
                   quote:
                     'Before preparing for international product interviews, I memorized word lists I never used aloud. Seeing my Mood Mode words appear as live objectives inside the Job Interview simulator helped me use them naturally.',
                   author: 'Sardor T. (Demo Persona)',
-                  role: 'Product Manager · Tashkent · B1 → B2 Workflow Example',
+                  role: 'Product Manager В· Tashkent В· B1 в†’ B2 Workflow Example',
                 },
                 {
                   quote:
                     'Turning my own past-perfect errors from the Airport Simulator into a Detective mystery case made the timeline rule click immediately instead of repeating fill-in-the-blank drills.',
                   author: 'Dildora M. (Demo Persona)',
-                  role: 'Masters Applicant · Samarkand · IELTS Prep Workflow Example',
+                  role: 'Masters Applicant В· Samarkand В· IELTS Prep Workflow Example',
                 },
                 {
                   quote:
                     'Our training cohort uses team invite codes and bilingual Uzbek/English AI Teacher explanations so junior engineers can practice client calls confidently.',
                   author: 'bekzod R. (Demo Persona)',
-                  role: 'Engineering Team Lead · Team Seat License Example',
+                  role: 'Engineering Team Lead В· Team Seat License Example',
                 },
               ].map((item, idx) => (
                 <div
                   key={idx}
                   className="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between"
                 >
-                  <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">“{item.quote}”</p>
+                  <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">вЂњ{item.quote}вЂќ</p>
                   <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800">
                     <p className="text-xs font-semibold text-slate-900 dark:text-white">{item.author}</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{item.role}</p>
@@ -960,7 +960,7 @@ const displayedPlans = plans?.filter((p) => {
                 },
                 {
                   q: 'Can schools, teachers, or companies purchase multi-seat plans?',
-                  a: 'Yes. Inside Dashboard → Referrals & Team, organizations can generate multi-seat invite codes, redeem gift subscriptions, or apply for approved affiliate commissions.',
+                  a: 'Yes. Inside Dashboard в†’ Referrals & Team, organizations can generate multi-seat invite codes, redeem gift subscriptions, or apply for approved affiliate commissions.',
                 },
               ].map((item, idx) => (
                 <div key={idx} className="py-4">
@@ -993,7 +993,7 @@ const displayedPlans = plans?.filter((p) => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-xs text-slate-500 dark:text-slate-400">
           <div>
             <p className="font-bold text-slate-900 dark:text-white text-sm">MindQuest AI</p>
-            <p className="mt-1">© {new Date().getFullYear()} MindQuest AI. International Adaptive English SaaS.</p>
+            <p className="mt-1">В© {new Date().getFullYear()} MindQuest AI. International Adaptive English SaaS.</p>
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <button type="button" onClick={() => setSubPage('about')} className="hover:text-slate-900 dark:hover:text-white cursor-pointer">
@@ -1021,3 +1021,4 @@ const displayedPlans = plans?.filter((p) => {
     </div>
   );
 };
+
