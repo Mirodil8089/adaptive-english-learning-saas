@@ -435,5 +435,18 @@ CREATE TABLE IF NOT EXISTS ai_settings (
   value_text TEXT NOT NULL,
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+-- 9. SUPPORT CONTACT MESSAGES
+CREATE TABLE IF NOT EXISTS contact_messages (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  full_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  topic TEXT NOT NULL DEFAULT 'General',
+  message TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'open',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_contact_messages_created
+ON contact_messages(created_at DESC);
 
 COMMIT;

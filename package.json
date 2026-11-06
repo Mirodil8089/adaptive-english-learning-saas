@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "tsx watch server.ts",
+    "dev:backend": "tsx watch server.ts",
+    "dev:frontend": "vite",
+    "start": "tsx server.ts",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -41,13 +44,5 @@
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"
-  },
-  "scripts": {
-  "dev": "tsx watch server.ts",
-  "dev:backend": "tsx watch server.ts",
-  "dev:frontend": "vite",
-  "start": "tsx server.ts",
-  "build": "vite build",
-  "preview": "vite preview"
-}
+  }
 }
