@@ -1,0 +1,6 @@
+{
+  "name": "MINDQUEST AI — Adaptive English Learning SaaS",
+  "description": "International subscription-based AI English learning platform uniting emotion-adaptive Mood Mode, real-life RPG Simulator Mode, grammar mystery Detective Mode, and bilingual Uzbek/English AI Teacher.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
